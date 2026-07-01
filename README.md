@@ -4,7 +4,7 @@ A responsive B2C website with a live demo booking system, built for the Communit
 
 ## Live demo
 - Vercel: _add your deployed URL here_
-- Repo: _add your GitHub URL here_
+- Repo: (https://github.com/Ndivhu4Coding/marula-cafe.git)
 
 ## Preview
 <!-- Add a real screenshot before submitting. Drag an image into
