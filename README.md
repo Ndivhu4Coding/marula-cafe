@@ -3,7 +3,7 @@
 A responsive B2C website with a live demo booking system, built for the CommunityBytes Access technical assessment.
 
 ## Live demo
-- Vercel: _add your deployed URL here_
+- Vercel: https://marula-cafe.vercel.app/
 - Repo: (https://github.com/Ndivhu4Coding/marula-cafe.git)
 
 ## Preview
