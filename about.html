@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — MARULA. Coffee House</title>
+  <meta name="description" content="The story behind MARULA., a neighbourhood coffee house in Johannesburg." />
+  <link rel="canonical" href="https://marula-cafe.vercel.app/about.html" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" data-open="false">
+      <a class="nav__logo" href="index.html">MARULA</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn" href="booking.html">Book a table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top:3rem;">
+      <div class="container" style="display:grid; grid-template-columns: 1fr 1fr; gap:3rem; align-items:start;">
+        <div>
+          <span class="eyebrow">About Us</span>
+          <h1>Named after the tree that feeds a whole <span class="accent-italic">neighbourhood</span>.</h1>
+        </div>
+        <div>
+          <p>The marula tree is known for one thing above all: it brings everyone together — people, birds, animals — under one canopy, drawn by what it has to offer. That's the idea behind this place.</p>
+          <p>MARULA. started as a weekend pop-up before we found this space. What hasn't changed is the pace: we want people to stay, not just pass through. That means real seating, real conversation, and coffee worth slowing down for.</p>
+          <p>Every plate is made on-site each morning. Every bean is sourced from small South African roasters, rotated monthly so regulars always have something new to try.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dim">
+      <div class="container">
+        <div class="card reveal" style="max-width:600px; margin:0 auto;">
+          <div class="card__media" style="aspect-ratio:4/3;">
+            <img src="images/cafe-terrace.webp" alt="People chatting at an outdoor café table in warm evening light" width="900" height="675" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p style="font-family: var(--font-display); font-size:1.2rem; margin:0 0 0.5rem;">MARULA.</p>
+          <p style="max-width:32ch;">4 Bramley Rd, Johannesburg</p>
+        </div>
+        <div>
+          <p><a href="tel:+27600000000">+27 60 000 0000</a></p>
+          <p><a href="mailto:hello@marula.co.za">hello@marula.co.za</a></p>
+        </div>
+        <div>
+          <p><a href="menu.html">Menu</a></p>
+          <p><a href="booking.html">Bookings</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">© 2026 MARULA. Coffee House.</div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/reveal.js"></script>
+</body>
+</html>

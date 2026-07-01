@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Table — MARULA. Coffee House</title>
+  <meta name="description" content="Book a table at MARULA. coffee house in Johannesburg." />
+  <link rel="canonical" href="https://marula-cafe.vercel.app/booking.html" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" data-open="false">
+      <a class="nav__logo" href="index.html">MARULA</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn" href="booking.html" aria-current="page">Book a table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top:3rem;">
+      <div class="container">
+        <span class="eyebrow">Booking</span>
+        <h1>Reserve a table</h1>
+        <p style="max-width:60ch; margin-bottom:2.5rem;">Pick a date and time below. We're closed Mondays — those dates are shown greyed out and can't be selected.</p>
+
+        <div class="booking-layout">
+          <!-- Calendar + time slots -->
+          <div>
+            <div class="calendar">
+              <div class="calendar__header">
+                <button type="button" class="calendar__nav-btn" id="calendarPrev" aria-label="Previous month">‹</button>
+                <span id="calendarMonthLabel"></span>
+                <button type="button" class="calendar__nav-btn" id="calendarNext" aria-label="Next month">›</button>
+              </div>
+              <div class="calendar__grid" id="calendarGrid"></div>
+              <div class="legend">
+                <span><span class="dot dot--available"></span> Available</span>
+                <span><span class="dot dot--selected"></span> Selected</span>
+                <span><span class="dot dot--closed"></span> Closed / past</span>
+              </div>
+            </div>
+
+            <div class="slots">
+              <h2 style="font-size:1.1rem;">Time</h2>
+              <p id="slotsEmpty" style="color: rgba(43,36,32,0.6); font-size:0.9rem;">Select a date to see available times.</p>
+              <div class="slots__grid hidden" id="slotsGrid"></div>
+            </div>
+          </div>
+
+          <!-- Form / confirmation -->
+          <div>
+            <div class="booking-form">
+              <div class="booking-summary hidden" id="bookingSummary"></div>
+
+              <form id="bookingForm" novalidate>
+                <div class="field">
+                  <label for="guestName">Full name</label>
+                  <input type="text" id="guestName" name="guestName" required minlength="2" />
+                  <p class="field__error" id="guestNameError">Please enter your name.</p>
+                </div>
+
+                <div class="field">
+                  <label for="guestPhone">Phone number</label>
+                  <input type="tel" id="guestPhone" name="guestPhone" required pattern="^[0-9+ ]{7,15}$" placeholder="+27 71 234 5678" />
+                  <p class="field__error" id="guestPhoneError">Please enter a valid phone number.</p>
+                </div>
+
+                <div class="field">
+                  <label for="guestCount">Party size</label>
+                  <select id="guestCount" name="guestCount" required>
+                    <option value="">Select…</option>
+                    <option value="1">1 guest</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5+ guests</option>
+                  </select>
+                  <p class="field__error" id="guestCountError">Please choose a party size.</p>
+                </div>
+
+                <p class="field__error" id="dateTimeError">Please select a date and time above.</p>
+
+                <button type="submit" class="btn" style="width:100%; justify-content:center; margin-top:0.5rem;">Reserve table</button>
+              </form>
+            </div>
+
+            <div class="booking-form confirmation hidden" id="bookingConfirmation">
+              <div class="confirmation__icon">✓</div>
+              <h2>Booking confirmed</h2>
+              <div id="confirmationSummary"></div>
+              <a id="whatsappLink" class="btn" href="#" target="_blank" rel="noopener" style="justify-content:center; width:100%; margin-top:1rem;">Confirm on WhatsApp</a>
+              <button type="button" id="resetBooking" class="btn btn--outline" style="justify-content:center; width:100%; margin-top:0.75rem;">Make another booking</button>
+            </div>
+          </div>
+        </div>
+
+        <p id="bookingLive" class="sr-only" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p style="font-family: var(--font-display); font-size:1.2rem; margin:0 0 0.5rem;">MARULA.</p>
+          <p style="max-width:32ch;">4 Bramley Rd, Johannesburg</p>
+        </div>
+        <div>
+          <p><a href="tel:+27600000000">+27 60 000 0000</a></p>
+          <p><a href="mailto:hello@marula.co.za">hello@marula.co.za</a></p>
+        </div>
+        <div>
+          <p><a href="menu.html">Menu</a></p>
+          <p><a href="booking.html">Bookings</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">© 2026 MARULA. Coffee House.</div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
